@@ -12,7 +12,7 @@ const outErros = document.querySelector("#outErros");
 const outPontuacao = document.querySelector("#outPontuacao")
 
 // calcula pontuação
-const pontuacao = (acertos*10) - ((erros*5) + (minutos*10) + (segundos*0.5));
+const pontuacao = (acertos*50) - ((erros*5) + (minutos*10) + (segundos*0.5));
 
 // imprime
 outMinutos.textContent = minutos.toString().padStart(2, '0');
