@@ -146,7 +146,7 @@ function virarCarta(carta, tagCarta) {
                         localStorage.setItem("segundos", segundos);
                         localStorage.setItem("acertos", acertos);
                         localStorage.setItem("erros", erros);
-                        window.location.href = "./fim.html";
+                        window.location.href = "fim.html";
                     }
 
                 }, 650);
