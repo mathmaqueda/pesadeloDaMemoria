@@ -47,6 +47,9 @@ a {
 /**************************/
 
 .titulo-inicio {
+    width: 100%;
+    border: 1px solid red;
+    text-align: center;
     font-family: Halloween;
     font-size: 3.8em;
     background-image: linear-gradient(to bottom, #BE540A, #F16B0E 60%, #FDD2B4);
@@ -288,6 +291,9 @@ label span:hover {
 @media screen and (max-width: 575.98px) {
     body {
         font-size: 7px;
+    }
+    .titulo-inicio {
+        font-size: 4em;
     }
     /* jogo.html */
     .cartas {
