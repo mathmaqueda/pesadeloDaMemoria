@@ -46,7 +46,7 @@ function montaJogo(JOGO, tabelaJogo) {
         }
         tagCarta.innerHTML = `
         <div class="cartaFrente">
-            <img class="imgCarta" src="../img/${carta}.png">
+            <img class="imgCarta" src="./img/${carta}.png">
         </div>
         <div class="cartaTras"></div>
         `;
