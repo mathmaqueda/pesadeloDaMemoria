@@ -47,7 +47,6 @@ a {
 /**************************/
 
 .titulo-inicio {
-    text-align: center;
     font-family: Halloween;
     font-size: 3.8em;
     background-image: linear-gradient(to bottom, #BE540A, #F16B0E 60%, #FDD2B4);
@@ -76,6 +75,17 @@ label span:hover {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #321C0C;
     text-shadow: 2px 2px 7px #f3c061;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+}
+
+.texto-rodape {
+    font-size: 1.5em;
 }
 
 /**************************/
