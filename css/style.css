@@ -1,0 +1,361 @@
+html, body, #home {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: Creepster;
+    font-size: 16px;
+    color: #D9600C;
+    overflow: hidden;
+}
+
+a {
+    color: #D9600C;
+    text-decoration: none;
+}
+
+/* fontes */
+@font-face {
+    font-family: Halloween;
+    src: url(../fonts/ScaryHalloweenFont.ttf);
+}
+@font-face {
+    font-family: Creepster;
+    src: url(../fonts/Creepster.ttf);
+}
+
+.fonte-Halloween {
+    font-family: Halloween;
+}
+
+.background {
+    height: 100vh;
+    background: url(../img/fundo1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.caixa {
+    width: 58%;
+    height: 100%;
+}
+
+/**************************/
+/* PRIMEIRA TELA */
+/**************************/
+
+.titulo-inicio {
+    font-family: Halloween;
+    font-size: 3.8em;
+    background-image: linear-gradient(to bottom, #BE540A, #F16B0E 60%, #FDD2B4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #F16B0E;
+}
+
+.tamanho-texto {
+    font-size: 2.5em;
+}
+
+.jogar {
+    font-size: 3.5em;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #321C0C;
+    text-shadow: 0 4px 4px #3C1901;
+}
+
+.jogar:hover {
+    text-shadow: 3px 3px 10px #f3c061;
+}
+
+label span:hover {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #321C0C;
+    text-shadow: 2px 2px 7px #f3c061;
+}
+
+/**************************/
+/* JOGO */
+/**************************/
+
+/**************************************/
+/* header */
+.titulo-jogo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.tab-status {
+    width: 780px;
+    height: 35px;
+    margin: 0 auto;
+    color: #3C1901;
+    background: #D9600C;
+    border-radius: 10px;
+}
+
+.divisoria {
+    border-left: 2px solid #3C1901;
+    border-right: 2px solid #3C1901;
+}
+
+.line-h {
+    line-height: 35px;
+}
+
+.icone-voltar {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 55px;
+    transition: all 0.10s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -webkit-transition: all 0.10s ease-in-out;
+}
+
+.icone-voltar:hover {
+    transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+
+.espacamento-titulo {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+/**************************************/
+
+/**************************************/
+/* tabela-jogo */
+.tabela-jogo {
+    margin: 15px auto 0 auto;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+}
+
+.tabela-jogo-facil {
+    width: 420px;
+}
+
+.tabela-jogo-medio {
+    width: 630px;
+}
+
+.tabela-jogo-dificil {
+    width: 840px;
+}
+
+.cartas {
+    position: relative;
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.acerto {
+    transform: rotateY(180deg);
+}
+
+.virarCarta {
+    transform: rotateY(180deg);
+}
+
+.imgCarta {
+    width: 95px;
+    height: 95px;
+}
+
+.cartaFrente, 
+.cartaTras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cartas .cartaFrente {
+    transform: rotateY(180deg);
+}
+
+.cartas .cartaTras {
+    background: url(../img/fundo-carta.png);
+    background-position: center center;
+    background-size: cover;
+}
+/**************************************/
+/* susto */
+.imagem-susto {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.audio-susto {
+    visibility: hidden;
+}
+
+/**************************/
+/* FIM */
+/**************************/
+
+.background-pontos {
+    background: url(../img/retangulo.png) no-repeat;
+    background-size: 360px 290px;
+    width: 49.5%;
+    height: 290px;
+    margin: 0 auto;
+}
+
+.espacamento-pontos {
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.caixa2 {
+    width: 59%;
+    height: calc(100% - 125px);
+}
+
+.pontuacao {
+    color: #3C1901;
+    text-align: center;
+}  
+
+/**************************/
+/* MEDIA QUERIES */
+/**************************/
+
+@media screen and (max-width: 991.98px) {
+    body {
+        font-size: 11px;
+    }
+    /* jogo.html */
+    .cartas {
+        width: 75px;
+        height: 75px;
+    }
+    .imgCarta {
+        width: 75px;
+        height: 75px;
+    }
+    .tab-status {
+        width: 650px;
+    }
+    .tabela-jogo {
+        width: 700px;
+        height: 350px;
+    }
+    .icone-voltar {
+        width: 40px;
+        
+    }
+    .tabela-jogo-facil {
+        width: 400px;
+    }
+    /* fim */
+    .background-pontos {
+        width: 220px;
+        height: 190px;
+        background-size: 220px 190px;
+        padding-bottom: 0;
+    }
+    .espacamento-pontos {
+        padding-top: 23px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .caixa {
+        width: 100%;
+    }
+    .caixa2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    body {
+        font-size: 7px;
+    }
+    /* jogo.html */
+    .cartas {
+        width: 45px;
+        height: 45px;
+    }
+    .imgCarta {
+        width: 45px;
+        height: 45px;
+    }
+    .tab-status {
+        width: 330px;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .line-h {
+        line-height: 20px;
+    }
+    .tabela-jogo {
+        width: 360px;
+        height: 400px;
+    }
+    .texto-tab-status {
+        font-size: 1.7em;
+    }
+    .icone-voltar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+    .tabela-jogo-medio {
+        height: 80%;
+    }
+    .tabela-jogo-facil {
+        width: 260px;
+        height: 50%;
+    }   
+    /* fim */
+    .background-pontos {
+        width: 155px;
+        height: 130px;
+        background-size: 155px 130px;
+        padding-bottom: 0;
+    }
+    .espacamento-pontos {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 6.5px;
+    }
+    /* jogo.html */
+    
+    .tab-status {
+        width: 310px;
+    }
+    .tabela-jogo {
+        width: 310px;
+        height: 400px;
+    }
+    .tabela-jogo-medio {
+        height: 90%;
+    }
+    .tabela-jogo-facil {
+        width: 260px;
+        height: 50%;
+    }   
+}
